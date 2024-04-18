@@ -1,0 +1,14 @@
+c:\Users\jaege\source\repos\BasicToDoList\bin\Debug\net8.0-windows\BasicToDoList.exe
+c:\Users\jaege\source\repos\BasicToDoList\bin\Debug\net8.0-windows\BasicToDoList.deps.json
+c:\Users\jaege\source\repos\BasicToDoList\bin\Debug\net8.0-windows\BasicToDoList.runtimeconfig.json
+c:\Users\jaege\source\repos\BasicToDoList\bin\Debug\net8.0-windows\BasicToDoList.dll
+c:\Users\jaege\source\repos\BasicToDoList\bin\Debug\net8.0-windows\BasicToDoList.pdb
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.AssemblyInfoInputs.cache
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.AssemblyInfo.cs
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.csproj.CoreCompileInputs.cache
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.dll
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\refint\BasicToDoList.dll
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.pdb
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.genruntimeconfig.cache
+c:\Users\jaege\source\repos\BasicToDoList\obj\Debug\net8.0-windows\ref\BasicToDoList.dll
