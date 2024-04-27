@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|C:\\Users\\jaege\\source\\repos\\BasicToDoList\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -36,9 +36,9 @@
               "RelativeDocumentMoniker": "BasicToDoList\\MainForm.Designer.cs",
               "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.Designer.cs",
               "RelativeToolTip": "BasicToDoList\\MainForm.Designer.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCoAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T16:50:47.29Z",
+              "WhenOpened": "2024-04-27T00:00:50.531Z",
               "EditorCaption": ""
             },
             {
@@ -49,7 +49,7 @@
               "RelativeDocumentMoniker": "BasicToDoList\\MainForm.cs",
               "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs",
               "RelativeToolTip": "BasicToDoList\\MainForm.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAtwCUAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T16:24:05.393Z",
               "EditorCaption": ""
@@ -69,7 +69,7 @@
               "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs [Design]",
               "RelativeToolTip": "BasicToDoList\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T23:44:00.65Z",
+              "WhenOpened": "2024-04-26T23:42:27.745Z",
               "EditorCaption": " [Design]"
             }
           ]

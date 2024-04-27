@@ -16,3 +16,11 @@ C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows
 C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.pdb
 C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.genruntimeconfig.cache
 C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows\ref\BasicToDoList.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows\BasicToDoList.csproj.AssemblyReference.cache
+C:\Users\jaege\source\repos\BasicToDoList\BasicToDoList\obj\Debug\net8.0-windows\BasicToD.B09E4996.Up2Date
