@@ -5,6 +5,8 @@ namespace BasicToDoList
 {
     public partial class MainForm : Form
     {
+        BindingSource taskBindingSource = new BindingSource();
+
         public MainForm()
         {
             InitializeComponent();
@@ -12,17 +14,52 @@ namespace BasicToDoList
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //DbConnectionStringBuilder
-            //"Data Source=DESKTOP-RQ2RN7V\To Do List;"
-            SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = "Server =.; Database = To Do List; Trusted_Connection = True;";
-            conn.Open();
+            TaskDAO taskList = new TaskDAO();
+
+            taskBindingSource.DataSource = taskList.getOpenTasks();
+            dataGridView1.DataSource = taskBindingSource;
+
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+
+            sqlCommandBuilder.DataAdapter = sqlDataAdapter;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        //// Get Tasks
+        //public class TaskDataService
+        //{
+        //    private readonly string _connectionString;
+        //    public TaskDataService(string connectionString)
+        //    {
+        //        _connectionString = connectionString;
+        //    }
 
-        }
+        //    public TaskInfo GetOpenTasks()
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(_connectionString))
+        //        {
+        //            string sql = "select taskName, taskDescription from Task where task.complete = 0;";
+        //            conn.Open();
+        //            using (SqlCommand cmd = new SqlCommand(sql, conn))
+        //            {
+        //                using (var reader = cmd.ExecuteReader())
+        //                {
+        //                    if (reader.Read())
+        //                    {
+        //                        return new TaskInfo
+        //                                    {
+        //                                        TaskName = reader[1].ToString(),
+        //                                        TaskDescription = reader[2].ToString()
+        //                                    };
+        //                    }
+        //                }
+        //            }
+        //        }
+
+        //        return null;
+        //    }
+
+        //}
 
         // Show a textbox when creating a new task and hide the textbox when done.
         private void startNewTask(object sender, EventArgs e)
@@ -50,10 +87,22 @@ namespace BasicToDoList
                 // Closes the key event to stop windows Ding.
                 e.Handled = true;
 
-                // Store the text and clear the textbox.
-                string text = newTaskName.Text;
+                // Capture the new task name and set a default description.
+                Task newTask = new Task()
+                {
+                    TaskName = newTaskName.Text,
+                    TaskDescription = ""
+                };
+
+                // Erase text from textbox
                 newTaskName.Text = "";
-                //MessageBox.Show(text);
+
+                // Create data access object and insert the new task into the database.
+                TaskDAO newTaskDAO = new TaskDAO();
+                int result = newTaskDAO.addNewTask(newTask);
+
+                taskBindingSource.DataSource = newTaskDAO.getOpenTasks();
+                dataGridView1.DataSource = taskBindingSource;
             }
         }
 

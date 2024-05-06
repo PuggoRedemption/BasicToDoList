@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|C:\\Users\\jaege\\source\\repos\\BasicToDoList\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|C:\\Users\\jaege\\source\\repos\\BasicToDoList\\basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|c:\\users\\jaege\\source\\repos\\basictodolist\\basictodolist\\taskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD64056F-8078-4B37-AA7D-03A0786D7AC7}|BasicToDoList\\BasicToDoList.csproj|solutionrelative:basictodolist\\taskdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +29,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 267,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -30,44 +38,70 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\Task.cs",
+              "RelativeDocumentMoniker": "BasicToDoList\\Task.cs",
+              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\Task.cs",
+              "RelativeToolTip": "BasicToDoList\\Task.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:40:53.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "BasicToDoList\\MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.Designer.cs",
-              "RelativeToolTip": "BasicToDoList\\MainForm.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.Designer.cs*",
+              "RelativeToolTip": "BasicToDoList\\MainForm.Designer.cs*",
+              "ViewState": "AQIAACwAAAAAAAAAAAAYwFYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T00:00:50.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs",
               "RelativeDocumentMoniker": "BasicToDoList\\MainForm.cs",
-              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs",
-              "RelativeToolTip": "BasicToDoList\\MainForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAApAAAA",
+              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs*",
+              "RelativeToolTip": "BasicToDoList\\MainForm.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T16:24:05.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskDAO.cs",
+              "DocumentMoniker": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\TaskDAO.cs",
+              "RelativeDocumentMoniker": "BasicToDoList\\TaskDAO.cs",
+              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\TaskDAO.cs",
+              "RelativeToolTip": "BasicToDoList\\TaskDAO.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:17:54.123Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 133,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs",
               "RelativeDocumentMoniker": "BasicToDoList\\MainForm.cs",
-              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs [Design]",
-              "RelativeToolTip": "BasicToDoList\\MainForm.cs [Design]",
+              "ToolTip": "C:\\Users\\jaege\\source\\repos\\BasicToDoList\\BasicToDoList\\MainForm.cs [Design]*",
+              "RelativeToolTip": "BasicToDoList\\MainForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T23:42:27.745Z",
               "EditorCaption": " [Design]"
