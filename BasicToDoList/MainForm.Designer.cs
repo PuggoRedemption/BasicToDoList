@@ -32,7 +32,6 @@
             newTaskName = new TextBox();
             newTaskButton = new Button();
             dataGridView1 = new DataGridView();
-            updateButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -63,6 +62,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.BackgroundColor = Color.DarkSlateGray;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -70,30 +70,18 @@
             dataGridViewCellStyle1.BackColor = SystemColors.Window;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = Color.SlateGray;
-            dataGridViewCellStyle1.SelectionForeColor = Color.SlateGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightSlateGray;
+            dataGridViewCellStyle1.SelectionForeColor = Color.LightSlateGray;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter;
             dataGridView1.GridColor = SystemColors.InfoText;
             dataGridView1.Location = new Point(25, 107);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(515, 401);
             dataGridView1.TabIndex = 3;
-            dataGridView1.ForeColor = Color.Black;
-            // 
-            // updateButton
-            // 
-            updateButton.BackColor = Color.SlateGray;
-            updateButton.FlatAppearance.BorderSize = 0;
-            updateButton.FlatStyle = FlatStyle.Flat;
-            updateButton.ForeColor = Color.Transparent;
-            updateButton.Location = new Point(12, 558);
-            updateButton.Name = "updateButton";
-            updateButton.Size = new Size(112, 34);
-            updateButton.TabIndex = 4;
-            updateButton.Text = "Update";
-            updateButton.UseVisualStyleBackColor = false;
+            dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
             // MainForm
             // 
@@ -102,7 +90,6 @@
             BackColor = Color.DarkSlateGray;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(566, 604);
-            Controls.Add(updateButton);
             Controls.Add(dataGridView1);
             Controls.Add(newTaskButton);
             Controls.Add(newTaskName);
@@ -122,6 +109,5 @@
         private TextBox newTaskName;
         private Button newTaskButton;
         private DataGridView dataGridView1;
-        private Button updateButton;
     }
 }

@@ -30,17 +30,16 @@ namespace BasicToDoList
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
                     // Create a SQL reader object to read data
-                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         // Read data and add to returnList
-                        while(reader.Read())
+                        while (reader.Read())
                         {
                             Task a = new Task
                             {
-                                //TaskID = reader.GetGuid(0),
                                 TaskName = reader.GetString(0),
                                 TaskDescription = reader.GetString(1),
-                                TaskComplete = reader.GetBoolean(2),
+                                Complete = reader.GetBoolean(2),
                             };
 
                             returnList.Add(a);

@@ -1,65 +1,54 @@
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace BasicToDoList
 {
     public partial class MainForm : Form
     {
+        string connectionString = "Server =.; Database = To Do List; Trusted_Connection = True;";
+        SqlCommand cmd;
+        SqlDataAdapter da;
         BindingSource taskBindingSource = new BindingSource();
+        DataTable dt = new DataTable();
 
         public MainForm()
         {
             InitializeComponent();
+
+            // Change text color here to avoid deletion.
+            dataGridView1.ForeColor = Color.Black;
+
         }
 
+        // Load the DataGridView
         private void MainForm_Load(object sender, EventArgs e)
-        {
-            TaskDAO taskList = new TaskDAO();
+        { 
+            // Set up connection, create a new DataAdapter, fill the DataTable, and set the DataSource to the DataTable.
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                da = new SqlDataAdapter("select taskID, taskName, taskDescription, complete from Task where task.complete = 0;", conn);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
 
-            taskBindingSource.DataSource = taskList.getOpenTasks();
-            dataGridView1.DataSource = taskBindingSource;
+                // Hide ID column and rename others
+                dataGridView1.Columns[0].Visible = false;
+                dt.Columns["taskName"].ColumnName = "Task Name";
+                dt.Columns["taskDescription"].ColumnName = "Description";
+                dt.Columns["complete"].ColumnName = "Complete";
 
-            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter();
+                // Set up Text Wrap for Description Field
+                dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                dataGridView1.Columns[2].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            sqlCommandBuilder.DataAdapter = sqlDataAdapter;
+                //((DataGridViewTextBoxColumn)dataGridView1.Columns[2]).MaxInputLength = 20;
+            
+                conn.Close();
+            }
         }
-
-        //// Get Tasks
-        //public class TaskDataService
-        //{
-        //    private readonly string _connectionString;
-        //    public TaskDataService(string connectionString)
-        //    {
-        //        _connectionString = connectionString;
-        //    }
-
-        //    public TaskInfo GetOpenTasks()
-        //    {
-        //        using (SqlConnection conn = new SqlConnection(_connectionString))
-        //        {
-        //            string sql = "select taskName, taskDescription from Task where task.complete = 0;";
-        //            conn.Open();
-        //            using (SqlCommand cmd = new SqlCommand(sql, conn))
-        //            {
-        //                using (var reader = cmd.ExecuteReader())
-        //                {
-        //                    if (reader.Read())
-        //                    {
-        //                        return new TaskInfo
-        //                                    {
-        //                                        TaskName = reader[1].ToString(),
-        //                                        TaskDescription = reader[2].ToString()
-        //                                    };
-        //                    }
-        //                }
-        //            }
-        //        }
-
-        //        return null;
-        //    }
-
-        //}
 
         // Show a textbox when creating a new task and hide the textbox when done.
         private void startNewTask(object sender, EventArgs e)
@@ -106,9 +95,33 @@ namespace BasicToDoList
             }
         }
 
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-        //    ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.Blue, ButtonBorderStyle.Solid);
-        //}
+        // Update the Database when a cell value has changed in the table.
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Set up a connection, grab the selected row, and set a SQL command to run a stored procedure.
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                DataGridViewRow dgvrow = dataGridView1.CurrentRow;
+                SqlCommand cmd2 = new SqlCommand("TaskEdit", conn);
+                cmd2.CommandType = CommandType.StoredProcedure;
+
+                // Map and send parameters to the stored procedure
+                cmd2.Parameters.AddWithValue("@taskID", dgvrow.Cells["taskID"].Value.ToString());
+                cmd2.Parameters.AddWithValue("@taskName", dgvrow.Cells["Task Name"].Value.ToString());
+                cmd2.Parameters.AddWithValue("@taskDescription", dgvrow.Cells["Description"].Value.ToString());
+                cmd2.Parameters.AddWithValue("@complete", Convert.ToBoolean(dgvrow.Cells["complete"].Value));
+                cmd2.ExecuteNonQuery();
+
+                // Repopulate the DataTable with updated information (mainly for removing complete records)
+                da = new SqlDataAdapter("select taskID, taskName, taskDescription, complete from Task where task.complete = 0;", conn);
+                //dt.Clear();
+                dt.Reset();
+                dataGridView1.DataSource = dt;
+                da.Fill(dt);
+
+                conn.Close();
+            }
+        }
     }
 }
