@@ -35,9 +35,9 @@ namespace BasicToDoList
 
                 // Hide ID column and rename others
                 dataGridView1.Columns[0].Visible = false;
-                dt.Columns["taskName"].ColumnName = "Task Name";
-                dt.Columns["taskDescription"].ColumnName = "Description";
-                dt.Columns["complete"].ColumnName = "Complete";
+                //dt.Columns["taskName"].ColumnName = "Task Name";
+                //dt.Columns["taskDescription"].ColumnName = "Description";
+                //dt.Columns["complete"].ColumnName = "Complete";
 
                 // Set up Text Wrap for Description Field
                 dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -108,17 +108,19 @@ namespace BasicToDoList
 
                 // Map and send parameters to the stored procedure
                 cmd2.Parameters.AddWithValue("@taskID", dgvrow.Cells["taskID"].Value.ToString());
-                cmd2.Parameters.AddWithValue("@taskName", dgvrow.Cells["Task Name"].Value.ToString());
-                cmd2.Parameters.AddWithValue("@taskDescription", dgvrow.Cells["Description"].Value.ToString());
+                cmd2.Parameters.AddWithValue("@taskName", dgvrow.Cells["taskName"].Value.ToString());
+                cmd2.Parameters.AddWithValue("@taskDescription", dgvrow.Cells["taskDescription"].Value.ToString());
                 cmd2.Parameters.AddWithValue("@complete", Convert.ToBoolean(dgvrow.Cells["complete"].Value));
                 cmd2.ExecuteNonQuery();
 
                 // Repopulate the DataTable with updated information (mainly for removing complete records)
                 da = new SqlDataAdapter("select taskID, taskName, taskDescription, complete from Task where task.complete = 0;", conn);
-                //dt.Clear();
-                dt.Reset();
-                dataGridView1.DataSource = dt;
+                dt.Clear();
                 da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+                // Hide ID column
+                dataGridView1.Columns[0].Visible = false;
 
                 conn.Close();
             }

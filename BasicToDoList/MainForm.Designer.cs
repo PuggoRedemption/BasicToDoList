@@ -40,7 +40,7 @@
             newTaskName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             newTaskName.Location = new Point(114, 23);
             newTaskName.Name = "newTaskName";
-            newTaskName.Size = new Size(426, 31);
+            newTaskName.Size = new Size(559, 31);
             newTaskName.TabIndex = 1;
             newTaskName.Visible = false;
             newTaskName.KeyPress += createNewTask;
@@ -79,7 +79,7 @@
             dataGridView1.Location = new Point(25, 107);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(515, 401);
+            dataGridView1.Size = new Size(648, 401);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellValueChanged += dataGridView1_CellValueChanged;
             // 
@@ -89,7 +89,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(566, 604);
+            ClientSize = new Size(699, 604);
             Controls.Add(dataGridView1);
             Controls.Add(newTaskButton);
             Controls.Add(newTaskName);
